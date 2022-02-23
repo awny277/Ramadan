@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramadan Countdown</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="container__content">
+      <img class="container__moon" src="./images/moon.svg" alt="moon">
+      <div class="container__shapes">
+        <div class="container__shape">
+          <img class="container__shapeImg" src="./images/islamic-shapes.svg" alt="shapeImage">
+        </div>
+        <div class="container__shape">
+          <img class="container__shapeImg" src="./images/islamic-shapes.svg" alt="shapeImage">
+        </div>
+        <div class="container__shape">
+          <img class="container__shapeImg" src="./images/islamic-shapes.svg" alt="shapeImage">
+        </div>
+        <div class="container__stars">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+          <img class="container__star" src="./images/star.svg" alt="star">
+        </div>
+      </div>
+      <p class="container__text">
+        <span>باقي</span>
+        <span class="container__textTo">علي</span>
+        <span class="container__textFrom">من</span>
+        <span class="container__spacialWord">رمضان</span>
+      </p>
+      <p class="container__remaining">
+        <span class="container__remainingTime">--</span>
+        <span class="day">يوم</span>
+      </p>
+      <!-- <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&autoplay=1&loop=1">
+      </iframe> -->
+      <!-- <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/XQ9OCdgp_xs?controls=1;autoplay=1&amp;start=2;"> 
+      </iframe> -->
+      <!-- <audio controls src="./music/ramadanMusic.mp3" autoplay loop></audio> -->
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/XQ9OCdgp_xs?controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <iframe width="0" height="0" src="https://www.youtube.com/watch?v=XQ9OCdgp_xs" allow="autoplay" allowfullscreen  frameborder="0" >.</iframe> -->
+
+      <audio id="audio" controls loop autoplay >
+        <source src="./music/ramadanMusic.mp3" type="audio/mpeg">
+      </audio>
+      <button id="play" onclick="enableAutoplay()">جرب..!</button>
+    </div>
+  </div>
+
+  <script src="./js/moment.js"></script>
+  <script src="./js/moment-hijri.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
