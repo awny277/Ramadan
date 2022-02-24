@@ -252,9 +252,17 @@ body {
 
 #audio {
   visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 
-#play {
+#btn {
   padding: 10px 15px;
   font-size: var(--fontsize-larg);
   background-color: transparent;
@@ -272,9 +280,10 @@ body {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  margin:0 10px;
 } 
 
-#play:hover {
+#btn:hover {
   background-color: #2e2c28;
   color: var(--color-bg);
   transform: scale(1.1);
@@ -283,3 +292,9 @@ body {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
+
+@media (max-width: 371px) { 
+  #btn {
+    font-size: 25px;
+  }
+ }

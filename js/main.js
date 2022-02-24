@@ -2,7 +2,10 @@ var x = document.getElementById("audio");
 function enableAutoplay() {
   x.load();
   x.autoplay = true;
-  x.currentTime = 3;
+  x.currentTime = 9;
+}
+function pauseBtn() {
+  x.pause();
 }
 
 // window.onload = function () {
