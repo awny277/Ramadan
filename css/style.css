@@ -78,14 +78,19 @@ body {
   text-shadow: 2px 2px 5px #ebc882;
 }
 
+.continerdate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container__remaining {
   font-size: var(--fontsize-medium);
   font-weight: var(--fontWeight-bold);
-}
-
-.container__remainingTime {
-  font-size: var(--fontsize-xLarg);
-  font-weight: var(--fontWeight-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
 .container--duringRamadan .container__textTo {

@@ -50,7 +50,41 @@ function pauseBtn() {
     }
   }
 
-  remainingTimeElement.textContent = Math.abs(diffr).toLocaleString("ar-sa");
+  // remainingTimeElement.textContent = Math.abs(diffr).toLocaleString("ar-sa");
+
+  let ramadanday = new Date(ramadanDate).getTime();
+  let zero = 0;
+  let counter = setInterval(() => {
+    let today = new Date().getTime();
+    let diffrent = ramadanday - today;
+    let dayes = Math.floor(diffrent / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diffrent % (1000 * 60 * 60 * 24)) / 1000 / 60 / 60);
+    let minutes = Math.floor((diffrent % (1000 * 60 * 60)) / 1000 / 60);
+    let second = Math.floor((diffrent % (1000 * 60)) / 1000);
+
+    remainingTimeElement.innerHTML =
+      dayes < 10
+        ? `${zero.toLocaleString("ar-sa")}${dayes.toLocaleString("ar-sa")}`
+        : dayes.toLocaleString("ar-sa");
+    let timeHour = document.querySelector(".container__remainingHour");
+    timeHour.innerHTML =
+      hours < 10
+        ? `${zero.toLocaleString("ar-sa")}${hours.toLocaleString("ar-sa")}`
+        : hours.toLocaleString("ar-sa");
+    let timeminutes = document.querySelector(".container__remainingMin");
+    timeminutes.innerHTML =
+      minutes < 10
+        ? `${zero.toLocaleString("ar-sa")}${minutes.toLocaleString("ar-sa")}`
+        : minutes.toLocaleString("ar-sa");
+    let timesecond = document.querySelector(".container__remainingSec");
+    timesecond.innerHTML =
+      second < 10
+        ? `${zero.toLocaleString("ar-sa")}${second.toLocaleString("ar-sa")}`
+        : second.toLocaleString("ar-sa");
+    if (diffrent < 0) {
+      clearInterval(counter);
+    }
+  }, 1000);
 
   // console.log(todayGeorgianDate);
   // console.log(todayHijriFormat);
