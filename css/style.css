@@ -29,6 +29,15 @@ body {
   position: relative;
   overflow: hidden;
 }
+#myVideo {
+  position: fixed;
+  /* width: 100%; */
+
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
 
 .container::after {
   position: absolute;
@@ -37,8 +46,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: radial-gradient(closest-side, rgba(5, 119, 103, .85), rgba(3, 73, 73, .95)); */
-  background: radial-gradient(closest-side, rgb(32 32 32 / 85%), rgb(24 23 23 / 95%));
+  /* background: radial-gradient(closest-side, rgb(32 32 32 / 85%), rgb(24 23 23 / 95%)); */
+  /* background: radial-gradient(closest-side, rgb(39 39 39 / 85%), rgb(20 20 20 / 95%)); */
+  background: radial-gradient(closest-side, rgb(45 44 44 / 71%), rgb(0 0 0 / 79%));
 } 
 
 .container::before {
@@ -48,12 +58,17 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-image: url(../images/bg-pattern.svg); */
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  background-image: url(../images/top.png);
+  background-image: url(../images2/4.jfif);
   /* opacity: 0.5; */
+}
+
+@media (max-width: 575.98px) { 
+  .container::before {
+  background-image: url(../images2/1.jfif);
+  }
 }
 
 .container__content {
