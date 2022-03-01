@@ -59,6 +59,7 @@ body {
 @media (max-width: 575.98px) { 
   .container::before {
   background-image: url(../images2/6.jfif);
+  background-image: url(../images2/3.jfif);
   }
   .container::after {
   /* background: radial-gradient(closest-side, rgb(29 29 29 / 71%), rgb(0 0 0 / 79%)); */
